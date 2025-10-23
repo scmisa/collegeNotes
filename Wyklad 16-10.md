@@ -21,7 +21,18 @@ Uwaga:
 Częściowa Poprawnosc nie gwarantuje zatrzymania sie algorytmu.
 
 ```pseudocode
-
+// Przykład: Znajdowanie maksimum w tablicy
+Algorithm FindMax(Arr, len):
+    max := Arr[0]
+    i := 1
+    
+    // Niezmiennik pętli: max zawiera największy element spośród Arr[0..i-1]
+    while i < len do:
+        if Arr[i] > max then:
+            max := Arr[i]
+        i := i + 1
+    
+    return max
 ```
 
 Istone są wszystkie detale nie wystarczy sam wzrost zmiennej, ale wystarczy wzrost o stalą wartosc,
