@@ -79,3 +79,22 @@ Algorytmy zachlanne są deterministyczne. Nie ma w nich losowości.
 1. Wydawanie reszty. Dane są nominały, K-kwota do wydania, wynik - utworzyc k z najmniejszej liczby banknotów z najmniejszej liczby i monet.
 
 Istniejące w świecie nominały, gdy tylko jest ich dostatecznie duzo w kasie, gwarantują że algorytm zachłanny daje zawsze najmniejsza liczbę banknotow i monet.
+
+2. Zmartwienie kinomana
+	- Dane: Program filmów w kinie na dany dzień.
+	- Wynik: Kinoman chce jednego dnia zobaczyć jak najwiecej filmów
+	- Strategia: Wybieraj filmy, które kończą sie najwcześniej
+
+
+3. Pakowanie plecaka
+	- Dane: `n` - rzeczy w nieograniczonej ilości i ta rzecz waży
+	- Ogólny problem plecakowy polega, aby spakować tak przedmioty, aby ich wartość była największa. Przed rozpoczęciem pakowania jest dokładnie wiadomo ile jest (nieskonczenie wiele) różnych przedmiotów, ile każdy waży oraz jaką mają wartość. W ogólnym problemie plecakowym liczba rzeczy jest nieograniczona tj. dany przedmiot możemy brać tyle razy ile chcemy. W przypadku, gdy dany przedmiot możemy wziąć tylko raz to mamy do czynienie z decyzyjnym problem plecakowym.
+	- W celu lepszego zrozumienia zadania warto postawić się w miejscu handlarza, który idzie na targ z plecakiem. Sprzedawca wie, że wszystko co zaniesie sprzeda za określoną cenę. Jego celem jest tak zapakować plecak, aby mógł go unieść, a wartość przedmiotów była jak największa
+	- ![[Pasted image 20251023084939.png]]
+	- Zachłanne kryteria wyboru rzeczy do plecaka:
+		1. Najcenniejsze najpierw 7 x nr 5 + 1 x nr 7 = 77
+		2. Najlzejsze najpierw 23 x nr 6 = 46
+		3. Najcenniejsze w stosunku do swojej wagi najpierw czyli w kolejności nie rosnących wartości ilorazu Wartosc / waga: 7/2 , 10/3 , 4/2, 2/1, 5/3 6/6, 11x nr4 +1 x nr6 = 79
+		4. Rozwiazanie optymalne: 10xnr4+1xnr5 = 80 
+
+### Żadne Zachłanne nie jest optymalne
