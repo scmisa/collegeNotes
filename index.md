@@ -1,8 +1,8 @@
 # Algorytmy i Struktury Danych - Notatki
 
-Witaj w mojej cyfrowej kolekcji notatek z przedmiotu **Algorytmy i Struktury Danych**.
+Witaj w mojej cyfrowej kolekcji notatek.
 
-## 📚 Notatki z Wykładów
+## 📚 Najnowsze Notatki z Wykładów
 
 - [[Wyklad 16-10]] - Poprawność algorytmów, niezmienniki pętli, metody projektowania algorytmów
 - [[Wyklad 23-10]] - Programowanie dynamiczne, dyskretny problem plecakowy
