@@ -31,7 +31,8 @@ W przypadku złożoności pamięciowej za jednostkę przyjmuje się zwykle słow
 - Algorytmy wyznaczania wartości wielomianu (operacja dominująca: operacje arytmetyczne)
 
 Za jednostkę złożoności czasowej przyjmuje się wykonanie jednej operacji dominującej.
-Złożoność obliczeniową algorytmu traktuje się jako funkcję rozmiaru danych n. Wyróżnia się złożoność pesymistyczną (worst-case) — zasoby potrzebne dla najgorszych danych wejściowych rozmiaru n — oraz złożoność oczekiwaną (average-case) — zasoby potrzebne dla typowych danych wejściowych rozmiaru n.
+
+Złożoność obliczeniową algorytmu traktuje się jako funkcję rozmiaru danych $n$. Wyróżnia się złożoność pesymistyczną (worst-case) — zasoby potrzebne dla najgorszych danych wejściowych rozmiaru $n$ — oraz złożoność oczekiwaną (average-case) — zasoby potrzebne dla typowych danych wejściowych rozmiaru $n$.
 
 $$
 D_n\text{ — zbiór danych wejściowych rozmiaru }n\\
@@ -91,19 +92,68 @@ Oczekiwana złożoność czasowa: $A(n) = \frac{n+1}{2}$
 
 Miara wrażliwości: $\omega(n) = n$
 
+Wynika stąd duża wrażliwość liczby operacji dominujących na dane wejściowe.
 
-..Wynika stąd duza wrazliwosc liczby operacji dominujacych na dane wejsciowe
+## Notacja asymptotyczna
 
+Faktyczna złożoność algorytmu (czas działania) w chwili jego użycia jako programu różni się od wyliczonej teoretycznie współczynnikiem proporcjonalności, który zależy od konkretnej realizacji tego algorytmu. Istotną zatem częścią informacji, która jest zawarta w funkcjach złożoności $A(n)$ i $W(n)$, jest **rząd wielkości**, czyli ich zachowanie asymptotyczne przy $n$ dążącym do nieskończoności. Zwykle staramy się podać jak najprostszą funkcję charakteryzującą rząd wielkości $W(n)$ i $A(n)$.
 
-Faktyczna złożoność algorytmu (czas dzialania) -  w chwili jego uzycia jako programu różni sie od wyliczonej teoretycznie współczynnikiem proporcjonalności, który zależy od konkretnej realizacji tego algorytmu. Istotną zatem częścią informacji ktora jest zawarta w funkcjach zlozonosci A(n) i W(n) jest rząd wielkosci czyli ich zachowanie asymptotyczne przy `n` dązącym do nieskonczonosci. Zwykle staramy się podac jak najprostszą funkcje charakteryzujaca rzad wielkosci W(n) i A(n).
+### Notacja O (duże O)
 
-Niech $f, g, h: N -> R_t 0$ mówimy ze f jest rzędu g $f(n)=O(g(n))$ jeśli istnieją stała rzeczywista, $c>0$ oraz $n_0 \in N$ , $f(n) <= g(n)$ 
+Niech $f, g, h: \mathbb{N} \to \mathbb{R}_{\geq 0}$. Mówimy, że $f$ jest rzędu $g$, oznaczane jako $f(n) = O(g(n))$, jeśli istnieją stała rzeczywista $c > 0$ oraz $n_0 \in \mathbb{N}$ takie, że:
 
-$$n^2 +2n = O(n^2)$$ *,bo*
-$$n^2+2n<=3n^2$$ $$\forall _n \in N$$
-$f(n) = \Omega(g(n))$ $g(n)=O(f(n))$
-$f(n)=O(g(n))$ i $f(n)=\Omega(g(n))$
+$$
+f(n) \leq c \cdot g(n) \quad \text{dla wszystkich } n \geq n_0
+$$
 
+**Przykład:**
 
+$$
+n^2 + 2n = O(n^2)
+$$
 
-Rzędy 2 wielkosci f i g moga byc porownywane dzieki granicy
+ponieważ:
+
+$$
+n^2 + 2n \leq 3n^2 \quad \forall n \in \mathbb{N}
+$$
+
+### Notacja Ω (duże Omega)
+
+$f(n) = \Omega(g(n))$ wtedy i tylko wtedy, gdy $g(n) = O(f(n))$.
+
+Oznacza to, że $f$ rośnie co najmniej tak szybko jak $g$.
+
+### Notacja Θ (duże Theta)
+
+$f(n) = \Theta(g(n))$ wtedy i tylko wtedy, gdy:
+
+- $f(n) = O(g(n))$ **i**
+- $f(n) = \Omega(g(n))$
+
+Oznacza to, że $f$ i $g$ rosną w tym samym tempie asymptotycznie.
+
+### Porównywanie rzędów wielkości
+
+Rzędy wielkości dwóch funkcji $f$ i $g$ mogą być porównywane dzięki granicy:
+
+$$
+\lim_{n \to \infty} \frac{f(n)}{g(n)} = L
+$$
+
+gdzie:
+
+- Jeśli $L = 0$, to $f(n) = O(g(n))$ i $f$ rośnie wolniej niż $g$
+- Jeśli $0 < L < \infty$, to $f(n) = \Theta(g(n))$ i $f$ i $g$ rosną w tym samym tempie
+- Jeśli $L = \infty$, to $f(n) = \Omega(g(n))$ i $f$ rośnie szybciej niż $g$
+
+### Typowe rzędy wielkości (od najwolniejszego wzrostu)
+
+1. $O(1)$ — stała
+2. $O(\log n)$ — logarytmiczna
+3. $O(n)$ — liniowa
+4. $O(n \log n)$ — liniowo-logarytmiczna
+5. $O(n^2)$ — kwadratowa
+6. $O(n^3)$ — sześcienna
+7. $O(2^n)$ — wykładnicza
+8. $O(n!)$ — silnia
