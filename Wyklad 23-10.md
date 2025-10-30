@@ -38,3 +38,12 @@ Przedmiot 1 zostal by wybrany jako 1-wszy nastepny bylby P2, do plecaka by nie t
  3. Obliczenie optymalnego kosztu metodą wstępującą Iteracyjnie wypełniamy macierz ( V[i,s] ) dla ( i = 1, 2, \ldots, n ) i ( s = 0, 1, \ldots, b ), stosując powyższą rekurencję. Wartość optymalnego rozwiązania otrzymujemy w ( V[n,b] ).
 
 ### Ciagly problem plecakowy
+
+Ciągły problem plecakowy różni sie od dyskretnego tym że zlodziej może zabierać ułamkowe części przedmiotów (wygodniej jest wtedy mówic o substancji)
+Uwaga: Ciągły problem plecakowy może byc rozwiązany metodą zachłanną.
+
+### Algorytm
+1. Obliczyć cenę jednostkowa kazdego przedmiotu
+2. Zebrac najwiekszą możliwą ilość najbardziej wartościowych substancji
+3. Jeśli zapas tej substancji sie wyczerpal a w plecaku jest jeszcze wolne miejsce złodziej wybiera nastepna pod wzgledem ceny jednostkowej, substancje i wypelnia ja plecak
+4. Kroki 1, ,2, 3 sa powtarzane do momentu gdy plecak bedzie pełen
