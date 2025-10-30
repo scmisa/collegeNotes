@@ -150,10 +150,12 @@ gdzie:
 ### Typowe rzędy wielkości (od najwolniejszego wzrostu)
 
 1. $O(1)$ — stała
-2. $O(\log n)$ — logarytmiczna
-3. $O(n)$ — liniowa
+2. $O(\log n)$ — logarytmiczna - czas działania logarytmiczny występuje np. dla algorytmów typu zadanie rozmiaru `n` zostaje sprowadzone do zadania rozmiaru n na 2+pewna stała liczba działań, np. poszukiwanie binarne
+3. $O(n)$ — liniowa - złożoność liniowa, czas działania liniowy występuje np. dla algorytmów, w których jest wykonywana pewna stała liczba działań dla każdego z n elementów danych wejściowych np. algorytm hornera
 4. $O(n \log n)$ — liniowo-logarytmiczna
 5. $O(n^2)$ — kwadratowa
 6. $O(n^3)$ — sześcienna
 7. $O(2^n)$ — wykładnicza
 8. $O(n!)$ — silnia
+
+
