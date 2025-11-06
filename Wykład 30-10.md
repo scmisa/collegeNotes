@@ -147,15 +147,25 @@ gdzie:
 - Jeśli $0 < L < \infty$, to $f(n) = \Theta(g(n))$ i $f$ i $g$ rosną w tym samym tempie
 - Jeśli $L = \infty$, to $f(n) = \Omega(g(n))$ i $f$ rośnie szybciej niż $g$
 
-### Typowe rzędy wielkości (od najwolniejszego wzrostu)
+### Typowe rzędy wielkości (od najwolniejszego wzrostu) #EGZAMIN
 
 1. $O(1)$ — stała
 2. $O(\log n)$ — logarytmiczna - czas działania logarytmiczny występuje np. dla algorytmów typu zadanie rozmiaru `n` zostaje sprowadzone do zadania rozmiaru n na 2+pewna stała liczba działań, np. poszukiwanie binarne
 3. $O(n)$ — liniowa - złożoność liniowa, czas działania liniowy występuje np. dla algorytmów, w których jest wykonywana pewna stała liczba działań dla każdego z n elementów danych wejściowych np. algorytm hornera
-4. $O(n \log n)$ — liniowo-logarytmiczna
-5. $O(n^2)$ — kwadratowa
+4. $O(n \log n)$ — liniowo-logarytmiczna - czas dzialania wystepuje np. dla algorytmów typu: zadanie rozmiaru n zostaje sprowadzone do 2 podzadań n1/2 +pewna liczba dzialań liniowa względem rozmiaru n potrzebnych do wykonania najpierw rozbicia a nastepnie scalenia rozwiazania rozmiaru n1/2 w rozwiazanie rozmiaru n (merge-sort)
+5. $O(n^2)$ — kwadratowa - czas działania kwadratowy występuje np. dla algorytmów, których jest wykonywana pewna stała liczba działań dla każdej pary elementów, podwójna instrukcja iteracyjna
 6. $O(n^3)$ — sześcienna
-7. $O(2^n)$ — wykładnicza
-8. $O(n!)$ — silnia
+7. $O(2^n)$ — wykładnicza - czas działania $2^n$ ma algorytm w którym jest wykonywana stała liczba działań dla każdego podzbioru danych wejsciowych
+8. $O(n!)$ — silnia - wykładnicza - czas działania n! ma np. algorytm w którym jest wykonywana stała liczba działań dla każdej permutacji danych wejściowych
 
+Uwaga:
+1. Algorytm o złożoności wykładniczej może byc realizowany dla małych rozmiarów danych, istnieje próg dla którego funkcja zaczyna rosnąć tak szybko że realizacja algorytmu na komputerze staje się nie możliwa
+2. Dane wejściowe dla których czas działania jest wykładniczy mogą się nigdy nie pojawić w rzeczywistych okolicznościach np. **metoda simplex programowania liniowego**, choć ta metoda ma złożoność wykładniczą dla najgorszych danych dla pojawiających się w praktyce danych wejściowych działa w czasie wielomianowym, a nawet liniowym
+
+Przy korzystaniu z wyników analizy złożoności algorytmu należy brać pod uwage następujące uwarunkowania:
+- algorytm i jego realizacja sa wyrażone w 2 różnych językach
+- wrażliwość algorytmu na dane wejściowe może spowodować że faktyczne zachowanie się algorytmu na używanych danych może odbiegać od zachowania opisanego przez $W(n)$ i $A(N)$ 
+- może być trudno przewidzieć rozkład $X(n)$
+- dla niektórych algorytmów nie są znane matematyczne oszacowania $W(n)$ i $A(N)$ 
+- czasami działanie 2 algorytmów jest trudno jednoznacznie porównać jeden działa dla pewnej klasy zestawu danych a drugi dla innych
 

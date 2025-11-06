@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Wykład 30-10.md",
+                "file": "Wykład 06-11.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Wykład 30-10"
+              "title": "Wykład 06-11"
             }
           }
         ]
@@ -171,11 +171,12 @@
   },
   "active": "913c6b0dc6e91a06",
   "lastOpenFiles": [
-    "Wyklad 23-10.md",
     "Wykład 30-10.md",
+    "Wykład 06-11.md",
     "index.md",
-    "Algorytmy i zlozonosc.md",
     "2025-10-23.md",
+    "Wyklad 23-10.md",
+    "Algorytmy i zlozonosc.md",
     "Wyklad 16-10.md",
     "Untitled.base",
     "Untitled.canvas",
