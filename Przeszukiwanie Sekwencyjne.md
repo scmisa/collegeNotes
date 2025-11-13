@@ -1,4 +1,4 @@
-# Przeszukiwanie Sekwencyjne
+
 ### Problem:
 W n elementowym zbiorze wyszukać element o zadanych własnościach.
 
@@ -94,4 +94,15 @@ Zastosowanie rekurencji:
 4. Jeśli metoda nie doprowadzi do stanu zakończenia, przechodzi w nieskończoną rekurencję, z drugiej strony jeśli zmienna sterująca nigdy nie prowadzi do wartości do zakończenia, instrukcja iteracji, iteruje w nieskończoność
 5. Nieskończona rekurencja może doprowadzić do awarii systemu, a nieskończona iteracja pochłania cykle procesora
 6. Rekurencja jest zawsze stosowana do metody, podczas gdy iteracja jest stosowana do zbioru instrukcji
-7. c.d.n
+7. Rekurencja zużywa więcej pamięci, ponieważ każde wywołanie metody odkłada się na stosie wywołań, natomiast iteracja zajmuje stałą ilość pamięci niezależnie od liczby powtórzeń.
+
+8. Rekurencję łatwiej stosować w problemach o strukturze hierarchicznej lub dzielonej na podproblemy (np. drzewa, sortowanie szybkie, przeszukiwanie binarne), podczas gdy iteracja jest bardziej efektywna w problemach sekwencyjnych lub liniowych.
+
+9. Rekurencję można często zastąpić iteracją dla zwiększenia wydajności, jednak kosztem czytelności kodu i prostoty algorytmu.
+10. Rekurencja skraca dlugość kodu a iteracja wydluża
+
+**Problem**
+Solenizant tnie tort i musi sie upewnić że wszyscy dostali po kawalku.
+
+Rekurecyjne: Weź kawalek ciasta z tacy i podaj tace kolejnej osobie
+Iteracyjne: Ja chodze i daje kazdemu kawalek

@@ -1,4 +1,4 @@
-# Metoda prób i błędów (Trial and Error)
+
 
 Algorytmy o tej właściwości nazywa się algorytmami z nawrotami (backtracking). Charakteryzują się tym, że kolejny krok, który może prowadzić do rozwiązania, jest zapamiętywany; gdy później okaże się, że nie prowadzi do rozwiązania, następuje usunięcie jego zapisu i wycofanie się do stanu poprzedzającego błędną decyzję. Najbardziej naturalnym opisem algorytmów z nawrotami jest rekurencja.
 

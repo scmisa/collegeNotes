@@ -1,5 +1,4 @@
-## Programowanie Dynamiczne #DynamicProgramming
-
+#DynamicProgramming
 To technika programowania algorytmów polegająca na rozwiązywaniu podproblemów i zapamiętywaniu ich wyników. W technice tej podobnie jak w metodzie #DivideAndConquer problemy dzielone sa na mniejsze podproblemy. Wyniki rozwiązywania podproblemów zapisywane sa w tabeli dzieki czemu w przypadku natrafienia na ten sam podproblem nie trzeba go ponownie rozwiązywać. Wykorzystując programowanie dynamiczne można zastosować metodę zstępujacą zapamietywaniem lub metode wstępującą.
 
 1. Metoda stepujaca z zapamietywaniem polega na rekurencyjnym wywolaniem funkcji z zapamietywaniem wyników, metoda ta podobna jest do metody #DivideAndConquer rozni sie od niej tym że jesli rozwiazanie danego problemu jest juz w tabeli z wynikami, to nalezy je z tamtad odczytac.
